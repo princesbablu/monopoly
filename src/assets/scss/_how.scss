@@ -1,0 +1,176 @@
+.how {
+    @include xxxl {
+        padding-top: 180px;
+        padding-bottom: 243px;
+    }
+    padding: 200px 0;
+    @include xl {
+        padding: 150px 0;
+    }
+    @include lg {
+        padding: 150px 0;
+    }
+    @include mmd {
+        padding: 150px 0;
+        padding-top: 100px;
+    }
+    &-title {
+        margin-bottom: 154px;
+        @include sm {
+            margin-bottom: 42px;
+        }
+        & h2 {
+            background: var(--l, linear-gradient(180deg, #FFE870 0%, #FFBE00 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            text-shadow: 0px 10px 0px #412A01;
+            -webkit-text-stroke-width: 4px;
+            -webkit-text-stroke-color: #000;
+            letter-spacing: -2px;
+            color: #FFD030;
+        }
+    }
+    &-cards {
+        max-width: 964px;
+        align-items: start;
+        gap: 56px;
+        @include xxxl {
+            margin-right: 100px;
+        }
+        @include lg {
+            gap: 40px;
+        }
+        @include md {
+            gap: 30px;
+        }
+        @include sm {
+            gap: 30px;
+        }
+        & .single {
+            border-radius: 40px;
+            border: 3px solid #6E78B3;
+            background: #FFF;
+            box-shadow: 6px 6px 0px 0px #231F20;
+            max-width: 450px;
+            background-image: url(../img/how-card-bg.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding: 78px 70px 40px 35px;
+            min-height: 470px;
+            @include lg {
+                min-height: auto;
+                max-width: 400px;
+                padding: 60px 20px 40px 30px;
+            }
+            @include md {
+                min-height: auto;
+                max-width: 350px;
+                padding: 60px 20px 40px 30px;
+            }
+            @include sm {
+                min-height: auto;
+                max-width: 350px;
+                padding: 60px 20px 40px 30px;
+            }
+            &:first-child {
+                margin-top: 204px;
+                @include sm {
+                    margin-top: 12px;
+                }
+            }
+            &:nth-child(3) {
+                margin-top: -21%;
+                @include xxxl {
+                    max-height: 470px;
+                }
+                @include md {
+                    margin-top: -26%;
+                }
+                @include sm {
+                    margin-top: unset;
+                }
+                & h5 {
+                    margin-bottom: 18px;
+                }
+                & .icon {
+                    @include xxxl {
+                        margin-bottom: 55px;
+                    }
+                }
+            }
+            & .counter {
+                width: 88px;
+                height: 119px;
+                background-image: url(../img/how-counter-bg.png);
+                background-size: 100% 100%;
+                margin-left: auto;
+                @include mmd {
+                    width: 70px;
+                    height: 95px;
+                }
+                & span {
+                    font-family: $font-2;
+                    @include font-40;
+                    margin-top: -20px;
+                }
+            }
+            & .icon {
+                margin-bottom: 72px;
+                @include lg {
+                    margin-bottom: 56px;
+                }
+                @include mmd {
+                    margin-bottom: 42px;
+                }
+                & img {
+                    @include mmd {
+                        max-width: 100px;
+                    }
+                }
+            }
+            & .text {
+                & h5 {
+                    color: #030303;
+                    text-shadow: 0px var(--sh, 5px) 0px #241544;
+                    -webkit-text-stroke-width: var(--st, 1.26px);
+                    -webkit-text-stroke-color: #FFF;
+                    font-family: $font-2;
+                    @include font-40;
+                    margin-bottom: 30px;
+                    @include lg {
+                        --sh: 3px;
+                        --st: .6px;
+                        margin-bottom: 24px;
+                    }
+                    @include mmd {
+                        --sh: 3px;
+                        --st: .6px;
+                        margin-bottom: 24px;
+                    }
+                    @include sm {
+                        --sh: 3px;
+                        --st: .6px;
+                        margin-bottom: 18px;
+                        font-size: 26px;
+                    }
+                }
+                & p {
+                    color: #000;
+                    @include font-22;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    &-img {
+        @include lg {
+            max-width: 750px;
+            top: -21%;
+        }
+        @include md {
+            max-width: 650px;
+            top: -21%;
+        }
+    }
+}

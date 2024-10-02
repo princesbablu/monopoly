@@ -1,0 +1,107 @@
+.about {
+    margin-top: -70px;
+    position: relative;
+    z-index: 3;
+    @include xl {
+        margin-top: -50px;
+    }
+    @include lg {
+        margin-top: -50px;
+    }
+    @include md {
+        margin-top: -50px;
+    }
+    @include sm {
+        margin-top: 0;
+    }
+    &-wrap {
+        border-radius: 100px 100px 39.975px 39.975px;
+        border: double var(--border, 8px) transparent;
+        background-image: linear-gradient(180deg, #FFE261 32.38%, #FFF8D4 81.91%), linear-gradient(180deg, #050606 0%, rgba(255, 248, 212, 0.00) 70%);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        overflow: hidden;
+        @include lg {
+            --border: 6px;
+        }
+        @include md {
+            --border: 5px;
+        }
+        @include sm {
+            --border: 4px;
+            border-radius: 40px;
+        }
+        & .inner {
+            padding: 58px 108px;
+            background-image: url(../img/about-bg-1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: content;
+            @include mmd {
+                padding: 30px 16px;
+            }
+            & .Logo {
+                margin-bottom: -65px;
+                @include lg {
+                    margin-bottom: -50px;
+                }
+                @include mmd {
+                    margin-bottom: -40px;
+                }
+                & img {
+                    @include lg {
+                        max-width: 300px;
+                    }
+                    @include md {
+                        max-width: 250px;
+                    }
+                    @include sm {
+                        max-width: 200px;
+                    }
+                }
+            }
+            & .content {
+                & h2 {
+                    background-clip: text;
+                    text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+                    -webkit-text-stroke-width: var(--stroke, 10px);
+                    -webkit-text-stroke-color: #050606;
+                    background: var(--l, linear-gradient(180deg, #FFE870 0%, #FFBE00 100%));
+                    -webkit-background-clip: text;
+                    // -webkit-text-fill-color: transparent;
+                    margin-bottom: var(--mb, 54px);
+                    color: #FFCF2D;
+                    @include xl {
+                        --stroke: 6px
+                    }
+                    @include lg {
+                        --stroke: 4px;
+                        --mb: 40px;
+                    }
+                    @include md {
+                        --stroke: 4px;
+                        --mb: 30px;
+                    }
+                    @include sm {
+                        --stroke: 3px;
+                        --mb: 24px;
+                    }
+                }
+                & p {
+                    color: $black;
+                    @include font-48;
+                    font-weight: 700;
+                    line-height: 150%;
+                    margin-bottom: 40px;
+                    @include md {
+                        margin-bottom: 32px;
+                    }
+                    @include sm {
+                        font-size: 22px;
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

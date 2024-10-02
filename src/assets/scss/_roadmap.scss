@@ -1,0 +1,60 @@
+.roadmap {
+    &-title {
+        h3 {
+            text-shadow: 0px 10px 0px #412A01;
+            -webkit-text-stroke-width: 4px;
+            -webkit-text-stroke-color: #000;
+            font-size: 101px;
+            letter-spacing: -2px;
+            background: var(--l, linear-gradient(180deg, #FFE870 0%, #FFBE00 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: $font-2;
+            @include lg{
+                font-size: 80px;
+            }
+            @include mmd{
+                font-size: 55px;
+                text-shadow: 0px 5px 0px #412A01;
+                -webkit-text-stroke-width: 2px;
+            }
+        }
+    }
+
+    &-card {
+        background-image: url('../img/roadmap-card.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        span {
+            @include font-54;
+            font-family: $font-2;
+            opacity: .1;
+        }
+
+        p {
+            font-family: $font-2;
+        }
+
+
+    }
+    &-shap{
+        --width:593px;
+        height: var(--width);
+        width: var(--width);
+        @include lg{
+            --width:390px;
+        }
+        @include mmd{
+            --width: 284px;
+    
+        }
+        @include sm{
+            display: none;
+        }
+    }
+
+    
+}

@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// 
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(26px/16px);
+    color: $text;
+    font-family: $font-1;
+    background-color: $bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading;
+    line-height: 80%;
+    text-transform: uppercase;
+    font-family: $font-2;
+}
+
+h2 {
+    font-size: 126px;
+    @include xl {
+        font-size: 100px;
+    }
+    @include lg {
+        font-size: 80px;
+    }
+    @include md {
+        font-size: 65px;
+    }
+    @include sm {
+        font-size: 48px;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    @include transition;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    border: 1px solid $border;
+    outline: none;
+    @include transition;
+    &:focus {
+        outline: none;
+        border-color: $primary;
+    }
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.btn {
+    --padding-x: 52px;
+    --padding-y: 27px;
+    --color: #000;
+    --border-width: 2px;
+    --border-color: #000;
+    --font-size: 22px;
+    --line-height: 1.2;
+    --border-radius: 12px;
+    text-transform: uppercase;
+    font-family: $font-2;
+    padding: var(--padding-y) var(--padding-x);
+    color: var(--color);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    display: inline-flex;
+    gap: 10px;
+    box-shadow: 0px 4px 0px 0px #000;
+    background: var(--l, linear-gradient(180deg, #FFE870 0%, #FFBE00 100%));
+    @include md {
+        --font-size: 20px;
+        --padding-x: 42px;
+        --padding-y: 20px;
+    }
+    @include sm {
+        --font-size: 18px;
+        --padding-x: 38px;
+        --padding-y: 18px;
+    }
+    &:hover {
+        background-color: $primary !important;
+        box-shadow: 0 0 0 transparent;
+        border-color: #FFF8D4;
+    }
+}
+
+// social 
+.social {
+    &-link {
+        --width: 60px;
+        width: var(--width);
+        height: var(--width);
+        background-color: $white;
+        color: $black;
+        box-shadow: 2px 2px 0px 0px $black;
+        border: 1px solid #770017;
+        border-radius: 10px;
+        @include md {
+            --width: 50px;
+            transform: scale(.8);
+        }
+        @include sm {
+            --width: 40px;
+            & svg {
+                transform: scale(.7);
+            }
+        }
+        &:hover {
+            box-shadow: 0 0 0;
+        }
+    }
+}
+
+.token {
+    border-radius: 12px;
+    border: 2px solid #000;
+    background: #FFF;
+    box-shadow: 0px 4px 0px 0px #231F20;
+    max-width: 759px;
+    max-height: 64px;
+    padding: 20px;
+    @include sm {
+        padding: 16px;
+    }
+    & p {
+        font-size: 20px !important;
+        line-height: 120% !important;
+        display: flex;
+        align-items: center;
+        max-width: 89%;
+        overflow: auto;
+        @include custom-scroll(0px);
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+        @include lg {
+            max-width: 88%;
+        }
+        @include mmd {
+            max-width: 80%;
+        }
+    }
+    & button {
+        color: #F5B137;
+        @include font-20;
+        line-height: 120%;
+        @include transition;
+        @include sm {
+            font-size: 18px !important;
+        }
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+#root {
+    overflow: hidden;
+}
+
+.container {
+    @media only screen and (min-width: 1650px) {
+        max-width: 1584px;
+    }
+    @media only screen and (max-width: 1440px) {
+        max-width: 1340px;
+    }
+    @media only screen and (max-width: 1280px) {
+        max-width: 1200px;
+    }
+}

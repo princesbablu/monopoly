@@ -1,0 +1,107 @@
+.community {
+    padding-bottom: 360px;
+    @include lg{
+        padding-bottom: 330px;
+    }
+    @include md{
+        padding-bottom: 315px;
+    }
+    @include sm{
+        padding-bottom: 178px;
+    }
+
+    &-content {
+        border: 7px dashed #0A0C11;
+        background-image: url("../img/community-bg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &-text {
+            h4 {
+                @include font-102;
+                text-shadow: 0px 10px 0px #412A01;
+                -webkit-text-stroke-width: 4px;
+                -webkit-text-stroke-color: #000;
+                letter-spacing: -2px;
+                background: var(--l, linear-gradient(180deg, #FFE870 0%, #FFBE00 100%));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                @include lg{
+                    text-shadow: 0px 7px 0px #412A01;
+                    -webkit-text-stroke-width: 3px;
+                }
+                @include md{
+                    text-shadow: 0px 7px 0px #412A01;
+                    -webkit-text-stroke-width: 3px;
+                }
+                @include sm{
+                    text-shadow: 0px 3px 0px #412A01;
+                    -webkit-text-stroke-width: 1px;
+                }
+            }
+
+        }
+
+        &-icon {
+            .icon {
+                box-shadow: 5px 5px $black;
+                padding: 43px 34px;
+                @include lg{
+                    padding: 30px 25px;
+                }
+                @include md{
+                    padding: 20px 22px;
+                    margin-top: -15px;
+                }
+                @include sm{
+                    
+                    padding: 15px;
+                }
+
+                &:hover {
+                    box-shadow: 0px 0px 0px 0px transparent !important;
+                }
+
+                svg {
+                    width: 67px;
+                    height: 58px;
+                    object-fit: contain;
+                    color: $black;
+                    @include mmd{
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &-shap {
+        width: 429px;
+        height: 454px;
+
+        @include xl {
+            width: 350px;
+            height: 360px;
+        }
+
+        @include lg {
+            width: 360px;
+            height: 375px;
+        }
+        @include md{
+            width: 320px;
+            height: 320px;
+        }
+        @include sm{
+            width: 149px;
+            height: 160px;
+    
+        }
+
+    }
+
+}

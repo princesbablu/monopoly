@@ -1,0 +1,181 @@
+.banner {
+    padding-top: 340px;
+    position: relative;
+    z-index: 1;
+    @include xl {
+        padding-top: 280px;
+    }
+    @include lg {
+        padding-top: 220px;
+    }
+    @include md {
+        padding-top: 180px;
+        text-align: center;
+    }
+    @include sm {
+        padding-top: 150px;
+        text-align: center;
+    }
+    &-content {
+        position: relative;
+        z-index: 1;
+        &::after {
+            position: absolute;
+            top: -26px;
+            left: -11px;
+            width: 826px;
+            height: 637px;
+            content: '';
+            z-index: -1;
+            border-radius: 100%;
+            background: #FFF1A2;
+            filter: blur(250px);
+            @include lg {
+                top: -112px;
+                left: -11px;
+                width: 113%;
+                height: 147%;
+                filter: blur(160px);
+            }
+            @include mmd {
+                top: -112px;
+                left: 0px;
+                width: 113%;
+                height: 147%;
+                filter: blur(160px);
+            }
+        }
+        & span {
+            color: #000;
+            font-size: 20px;
+            letter-spacing: 10px;
+            margin-bottom: 45px;
+            font-family: $font-2;
+            @include xl {
+                margin-bottom: 32px;
+            }
+            @include lg {
+                font-size: 17px;
+                margin-bottom: 24px;
+                letter-spacing: 9px;
+            }
+            @include md {
+                font-size: 18px;
+                margin-bottom: 18px;
+                letter-spacing: 7px;
+            }
+            @include sm {
+                font-size: 18px;
+                margin-bottom: 16px;
+                letter-spacing: 4px;
+            }
+            @include ssm {
+                font-size: 16px;
+                margin-bottom: 14px;
+                letter-spacing: 2px;
+            }
+        }
+        & h1 {
+            background: var(--l, linear-gradient(180deg, #FFE870 0%, #FFBE00 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            text-shadow: 0px var(--shadow, 12px) 0px #F5B137;
+            -webkit-text-stroke-width: var(--stroke, 4px);
+            -webkit-text-stroke-color: #000;
+            font-size: 190px;
+            margin-bottom: 16px;
+            color: #FFD949;
+            @include xxl {
+                font-size: 160px;
+            }
+            @include xl {
+                font-size: 140px;
+            }
+            @include lg {
+                font-size: 100px;
+                --shadow: 8px;
+                --stroke: 3px;
+            }
+            @include md {
+                font-size: 80px;
+                --shadow: 7px;
+                --stroke: 3px;
+            }
+            @include sm {
+                font-size: 65px;
+                --shadow: 6px;
+                --stroke: 2px;
+            }
+            @include ssm {
+                font-size: 50px;
+            }
+        }
+        & p {
+            color: #000;
+            font-size: 26px;
+            line-height: 160%;
+            margin-bottom: 24px;
+            @include sm {
+                line-height: 120%;
+            }
+        }
+    }
+    &-img {
+        padding-top: 50px;
+        position: relative;
+        z-index: 3;
+        @include sm {
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+    }
+    & .style {
+        position: absolute;
+        z-index: -2;
+        &-1 {
+            top: 0;
+            left: 37%;
+            @media only screen and (min-width: 2200px) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            @include mmd {
+                max-width: 180px;
+            }
+        }
+        &-2 {
+            bottom: 10px;
+            left: -50px;
+            @include lg {
+                max-width: 130px;
+                bottom: 38px;
+                left: 0;
+            }
+            @include mmd {
+                max-width: 80px;
+                bottom: 38px;
+                right: 65px;
+            }
+        }
+        &-3 {
+            bottom: 38px;
+            right: 187px;
+            @include lg {
+                max-width: 180px;
+                bottom: 38px;
+                right: 65px;
+            }
+            @include mmd {
+                max-width: 130px;
+                bottom: 38px;
+                right: 65px;
+            }
+        }
+    }
+    & .bottomStyle {
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 20px;
+    }
+}
